@@ -48,7 +48,6 @@ def mark_attendance(name):
     date = now.strftime("%Y-%m-%d")
     time = now.strftime("%H:%M:%S")
 
-    # If file does not exist OR is empty → create with headers
     if not os.path.exists(ATTENDANCE_FILE) or os.stat(ATTENDANCE_FILE).st_size == 0:
         df = pd.DataFrame(columns=["Name", "Date", "Time"])
     else:
